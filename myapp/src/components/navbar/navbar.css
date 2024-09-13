@@ -1,0 +1,104 @@
+/* Basic styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-hamburger-and-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.navbar-right button:hover {
+  background-color: #333; /* Dark background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.primary-btn {
+  background-color: #000000 !important;
+  color: white !important;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.primary-btn:hover {
+  background-color: #333 !important; /* Lighter background on hover */
+  color: #fff !important; /* White text on hover */
+}
+
+/* Hamburger menu is visible on all screen sizes */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px; /* Add space between the buttons and the hamburger menu */
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+}
+
+/* Responsive Menu - Media Queries */
+@media (max-width: 768px) {
+  .navbar-right {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    display: none;
+  }
+
+  .navbar-right.open {
+    display: flex;
+  }
+
+  .navbar-right button {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
